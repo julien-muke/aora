@@ -244,3 +244,7 @@ const videos = [
 ```
 
 </details>
+
+## <a name="links">🔗 Links</a>
+
+Assets and constants used in the project can be found [here](https://drive.google.com/drive/folders/1pckq7VAoqZlmsEfYaSsDltmQSESKm8h7?usp=sharing)
