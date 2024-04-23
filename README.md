@@ -31,29 +31,27 @@ this app showcases impressive design and functionality, enabling seamless sharin
 
 ## <a name="features">🔋 Features</a>
 
-👉 **Authentication**: Implements authentication and authorization features using Clerk, allowing users to securely log in via social sign-on or traditional email and password methods, while ensuring appropriate access levels and permissions within the platform.
+👉 **Onboarding Screen**: Engaging graphics and clear instructions welcome users to the app.
 
-👉 **New Meeting**: Quickly start a new meeting, configuring camera and microphone settings before joining.
+👉 **Robust Authentication & Authorization System**: Secure email login safeguards user accounts.
 
-👉 **Meeting Controls**: Participants have full control over meeting aspects, including recording, emoji reactions, screen sharing, muting/unmuting, sound adjustments, grid layout, participant list view, and individual participant management (pinning, muting, unmuting, blocking, allowing video share).
+👉 **Dynamic Home Screen with Animated Flat List**: Smoothly animated flat list showcases the latest videos for seamless browsing.
 
-👉 **Exit Meeting**: Participants can leave a meeting, or creators can end it for all attendees.
+👉 **Pull-to-Refresh Functionality**: Users can refresh content with a simple pull gesture for up-to-date information.
 
-👉 **Schedule Future Meetings**: Input meeting details (date, time) to schedule future meetings, accessible on the 'Upcoming Meetings' page for sharing the link or immediate start.
+👉 **Full-Text Search Capability**: Efficiently search through videos with real-time suggestions and instant results.
 
-👉 **Past Meetings List**: Access a list of previously held meetings, including details and metadata.
+👉 **Tab Navigation**: Navigate between sections like Home, Search, and Profile with ease using tab navigation.
 
-👉 **View Recorded Meetings**: Access recordings of past meetings for review or reference.
+👉 **Post Creation Screen for Uploading Media**: Upload video and image posts directly from the app with integrated media selection.
 
-👉 **Personal Room**: Users have a personal room with a unique meeting link for instant meetings, shareable with others.
+👉 **Profile Screen with Detailed Insights**: View account details and activity, including uploaded videos and follower count, for a personalized experience.
 
-👉 **Join Meetings via Link**: Easily join meetings created by others by providing a link.
+👉 **Responsiveness**: Smooth performance and adaptability across various devices and screen sizes for a consistent user experience.
 
-👉 **Secure Real-time Functionality**: All interactions within the platform are secure and occur in real-time, maintaining user privacy and data integrity.
+👉 **Animations**: Dynamic animations using the Animatable library to enhance user interaction and engagement throughout the app's UI.
 
-👉 **Responsive Design**: Follows responsive design principles to ensure optimal user experience across devices, adapting seamlessly to different screen sizes and resolutions.
-
-and many more, including code architecture and reusability. 
+and many more, including code architecture and reusability.
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
