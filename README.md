@@ -68,10 +68,9 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/julien-muke/zoom-app.git
-cd zoom-app
+git clone https://github.com/adrianhajdin/aora.git
+cd aora
 ```
-
 **Installation**
 
 Install the project dependencies using npm:
@@ -80,24 +79,15 @@ Install the project dependencies using npm:
 npm install
 ```
 
-**Set Up Environment Variables**
+**Running the Project**
 
-Create a new file named `.env` in the root of your project and add the following content:
-
-```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-
-NEXT_PUBLIC_STREAM_API_KEY=
-STREAM_SECRET_KEY=
+```bash
+npm start
 ```
 
-Replace the placeholder values with your actual Clerk & getstream credentials. You can obtain these credentials by signing up on the [Clerk website](https://clerk.com/) and [getstream website](https://getstream.io/)
+**Expo Go**
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+Download the [Expo Go](https://expo.dev/go) app onto your device, then use it to scan the QR code from Terminal and run.
 
 ## <a name="snippets">🕸️ Snippets</a>
 
