@@ -92,121 +92,155 @@ Download the [Expo Go](https://expo.dev/go) app onto your device, then use it to
 ## <a name="snippets">🕸️ Snippets</a>
 
 <details>
-<summary><code>app/globals.css</code></summary>
+<summary><code>tailwind.config.js</code></summary>
 
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        primary: "#161622",
+        secondary: {
+          DEFAULT: "#FF9C01",
+          100: "#FF9001",
+          200: "#FF8E01",
+        },
+        black: {
+          DEFAULT: "#000",
+          100: "#1E1E2D",
+          200: "#232533",
+        },
+        gray: {
+          100: "#CDCDE0",
+        },
+      },
+      fontFamily: {
+        pthin: ["Poppins-Thin", "sans-serif"],
+        pextralight: ["Poppins-ExtraLight", "sans-serif"],
+        plight: ["Poppins-Light", "sans-serif"],
+        pregular: ["Poppins-Regular", "sans-serif"],
+        pmedium: ["Poppins-Medium", "sans-serif"],
+        psemibold: ["Poppins-SemiBold", "sans-serif"],
+        pbold: ["Poppins-Bold", "sans-serif"],
+        pextrabold: ["Poppins-ExtraBold", "sans-serif"],
+        pblack: ["Poppins-Black", "sans-serif"],
+      },
+    },
+  },
+  plugins: [],
+};
+```
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+</details>
 
-/* ======== stream css overrides ======== */
-.str-video__call-stats {
-  max-width: 500px;
-  position: relative;
-}
+<details>
+<summary><code>Font Loaded</code></summary>
 
-.str-video__speaker-layout__wrapper {
-  max-height: 700px;
-}
+```javascript
+const [fontsLoaded, error] = useFonts({
+  "Poppins-Black": require("../assets/fonts/Poppins-Black.ttf"),
+  "Poppins-Bold": require("../assets/fonts/Poppins-Bold.ttf"),
+  "Poppins-ExtraBold": require("../assets/fonts/Poppins-ExtraBold.ttf"),
+  "Poppins-ExtraLight": require("../assets/fonts/Poppins-ExtraLight.ttf"),
+  "Poppins-Light": require("../assets/fonts/Poppins-Light.ttf"),
+  "Poppins-Medium": require("../assets/fonts/Poppins-Medium.ttf"),
+  "Poppins-Regular": require("../assets/fonts/Poppins-Regular.ttf"),
+  "Poppins-SemiBold": require("../assets/fonts/Poppins-SemiBold.ttf"),
+  "Poppins-Thin": require("../assets/fonts/Poppins-Thin.ttf"),
+});
 
-.str-video__participant-details {
-  color: white;
-}
+useEffect(() => {
+  if (error) throw error;
 
-.str-video__menu-container {
-  color: white;
-}
-
-.str-video__notification {
-  color: white;
-}
-
-.str-video__participant-list {
-  background-color: #1c1f2e;
-  padding: 10px;
-  border-radius: 10px;
-  color: white;
-  height: 100%;
-}
-
-.str-video__call-controls__button {
-  height: 40px;
-}
-
-.glassmorphism {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-.glassmorphism2 {
-  background: rgba(18, 17, 17, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-/* ==== clerk class override ===== */
-
-.cl-userButtonPopoverActionButtonIcon {
-  color: white;
-}
-
-.cl-logoBox {
-  height: 40px;
-}
-.cl-dividerLine {
-  background: #252a41;
-  height: 2px;
-}
-
-.cl-socialButtonsIconButton {
-  border: 3px solid #565761;
-}
-
-.cl-internal-wkkub3 {
-  color: white;
-}
-.cl-userButtonPopoverActionButton {
-  color: white;
-}
-
-/* =============================== */
-
-@layer utilities {
-  .flex-center {
-    @apply flex justify-center items-center;
+  if (fontsLoaded) {
+    SplashScreen.hideAsync();
   }
+}, [fontsLoaded, error]);
 
-  .flex-between {
-    @apply flex justify-between items-center;
-  }
+if (!fontsLoaded && !error) {
+  return null;
 }
+```
 
-/* animation */
+</details>
 
-.show-block {
-  width: 100%;
-  max-width: 350px;
-  display: block;
-  animation: show 0.7s forwards linear;
-}
+<details>
+<summary><code>Dummy Videos for Appwrite</code></summary>
 
-@keyframes show {
-  0% {
-    animation-timing-function: ease-in;
-    width: 0%;
-  }
-
-  100% {
-    animation-timing-function: ease-in;
-    width: 100%;
-  }
-}
+```javascript
+const videos = [
+  {
+    title: "Get inspired to code",
+    thumbnail:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660eff632e9b02fe90e3/preview?width=2000&height=2000&gravity=top&quality=100&project=660d0e00da0472f3ad52",
+    video:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660f004955f51e7e3212/view?project=660d0e00da0472f3ad52",
+    prompt:
+      "Create a motivating AI driven video aimed at inspiring coding enthusiasts with simple language",
+  },
+  {
+    title: "How AI Shapes Coding Future",
+    thumbnail:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660f0294e36d80abfaa9/preview?width=2000&height=2000&gravity=top&quality=100&project=660d0e00da0472f3ad52",
+    video:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660f032718759c0250ae/view?project=660d0e00da0472f3ad52",
+    prompt: "Picture the future of coding with AI. Show AR VR",
+  },
+  {
+    title: "Dalmatian's journey through Italy",
+    thumbnail:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660f08374f22dab6ed8a/preview?width=2000&height=2000&gravity=top&quality=100&project=660d0e00da0472f3ad52",
+    video:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660f093a03c20c7b2d12/view?project=660d0e00da0472f3ad52",
+    prompt:
+      "Create a heartwarming video following the travels of dalmatian dog exploring beautiful Italy",
+  },
+  {
+    title: "Meet small AI friends",
+    thumbnail:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660f0aef261367cdc1f5/preview?width=2000&height=2000&gravity=top&quality=100&project=660d0e00da0472f3ad52",
+    video:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660f0b7855304dd4f802/view?project=660d0e00da0472f3ad52",
+    prompt:
+      "Make a video about a small blue AI robot blinking its eyes and looking at the screen",
+  },
+  {
+    title: "Find inspiration in Every Line",
+    thumbnail:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660fd243473318c9dde1/preview?width=2000&height=2000&gravity=top&quality=100&project=660d0e00da0472f3ad52",
+    video:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660fd2cec9eb0298c9ac/view?project=660d0e00da0472f3ad52",
+    prompt:
+      "A buy working on his laptop that sparks excitement for coding, emphasizing the endless possibilities and personal growth it offers",
+  },
+  {
+    title: "Japan's Blossoming temple",
+    thumbnail:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660fd5105ae00135f9f1/preview?width=2000&height=2000&gravity=top&quality=100&project=660d0e00da0472f3ad52",
+    video:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660fd543cc4792ba0611/view?project=660d0e00da0472f3ad52",
+    prompt: "Create a captivating video journey through Japan's Sakura Temple",
+  },
+  {
+    title: "A Glimpse into Tomorrow's VR World",
+    thumbnail:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660fd68ced2adc48ace2/preview?width=2000&height=2000&gravity=top&quality=100&project=660d0e00da0472f3ad52",
+    video:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660fd6b103374105e099/view?project=660d0e00da0472f3ad52",
+    prompt: "An imaginative video envisioning the future of Virtual Reality",
+  },
+  {
+    title: "A World where Ideas Grow Big",
+    thumbnail:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660fd7cb71f83e85ec89/preview?width=2000&height=2000&gravity=top&quality=100&project=660d0e00da0472f3ad52",
+    video:
+      "https://cloud.appwrite.io/v1/storage/buckets/660d0e59e293896f1eaf/files/660fd84ce8c5ff020f71/view?project=660d0e00da0472f3ad52",
+    prompt:
+      "Make a fun video about hackers and all the cool stuff they do with computers",
+  },
+];
 ```
 
 </details>
