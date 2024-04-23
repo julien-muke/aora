@@ -12,21 +12,22 @@
     <img src="https://img.shields.io/badge/NativeWind-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="nativewind" />
   </div>
 
-  <h3 align="center">A Zoom Clone</h3>
+  <h3 align="center">Video Sharing App</h3>
 </div>
 
 ## <a name="introduction">🤖 Introduction</a>
 
-Build a professional enterprise-ready video conferencing app in hours using Next.js 14, Stream, and Tailwind CSS.
+Built with React Native for seamless user experiences, Animatable for captivating animations, and integrated with the dependable backend systems of Appwrite, 
+this app showcases impressive design and functionality, enabling seamless sharing of AI videos within the community.
+
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
-- Next.js
-- TypeScript
-- Clerk
-- getstream
-- shadcn
-- Tailwind CSS
+- React Native
+- Expo
+- Nativewind
+- Animatable
+- Appwrite
 
 ## <a name="features">🔋 Features</a>
 
