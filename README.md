@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://youtu.be/R8CIO1DZ2b8" target="_blank">
-      <img src="https://github.com/julien-muke/aora/assets/110755734/91924a24-c84a-4fb4-8b08-cad8635599b1" alt="Project Banner">
+      <img src="https://github.com/julien-muke/aora/assets/110755734/2ea24a21-6fa7-450a-bac4-afe7e72e8165" alt="Project Banner">
     </a>
 
   <br />
