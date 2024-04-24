@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/R8CIO1DZ2b8" target="_blank">
+    <a href="https://www.figma.com/file/o6xKq25ETLqw5ebqgZonVp/Aora---React-Native-Crash-Course?type=design&node-id=0-1&mode=design&t=zyV6fE3vDxQF0xlQ-0" target="_blank">
       <img src="https://github.com/julien-muke/aora/assets/110755734/2ea24a21-6fa7-450a-bac4-afe7e72e8165" alt="Project Banner">
     </a>
 
@@ -68,7 +68,7 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/adrianhajdin/aora.git
+git clone https://github.com/julien-muke/aora.git
 cd aora
 ```
 **Installation**
